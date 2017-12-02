@@ -1,0 +1,29 @@
+{% extends 'admin/change_list.html' %}
+
+{% load i18n %}
+
+{% block breadcrumbs %}
+  {% if not is_popup %}
+    {% if has_module_permission_false %}
+      {% if admin_app == 'grappelli' %}
+        <ul class="grp-horizontal-list">
+          <li><a href="{% url 'admin:index' %}">{% trans "Home" %}</a></li>
+          <li>{{ cl.opts.verbose_name_plural|capfirst }}</li>
+        </ul>
+      {% elif admin_app == 'suit' %}
+        <ul class="breadcrumb">
+          <li><a href="{% url 'admin:index' %}">{% trans 'Home' %}</a>
+            <span class="divider">&raquo;</span></li>
+          <li class="active">{{ cl.opts.verbose_name_plural|capfirst }}</li>
+        </ul>
+      {% else %}
+        <div class="breadcrumbs">
+        <a href="{% url 'admin:index' %}">{% trans 'Home' %}</a>
+        &rsaquo; {{ cl.opts.verbose_name_plural|capfirst }}
+        </div>
+      {% endif %}
+    {% else %}
+      {{ block.super }}
+    {% endif %}
+  {% endif %}
+{% endblock breadcrumbs %}

@@ -1,0 +1,2 @@
+recursive-include admin_log_entries/templates *
+include LICENSE.txt
