@@ -1,0 +1,46 @@
+[
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$36000$DNfbBcnYqrqn$DBDMzljDUoMxYOdOnM0KCf6h47wdwapbHfjJCA/4eJc=",
+    "last_login": "2018-03-17T01:34:48.935Z",
+    "is_superuser": true,
+    "username": "superuser",
+    "first_name": "",
+    "last_name": "",
+    "email": "superuser@example.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2018-03-17T01:34:38.089Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2018-03-17T01:35:07.620Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "/test/ -- \ud835\udc9cwesome I\u00f1t\u00ebrn\u00e2ti\u00f4n\u00e0liz\u00e6ti\u00f8n\u2603\ud83d\ude42",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2018-03-17T01:35:15.817Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "/test/ -- \ud835\udc9cwesome I\u00f1t\u00ebrn\u00e2ti\u00f4n\u00e0liz\u00e6ti\u00f8n\u2603\ud83d\ude42",
+    "action_flag": 3,
+    "change_message": ""
+  }
+}
+]

@@ -27,6 +27,8 @@ settings.configure(
         'django.contrib.contenttypes',
         'django.contrib.sessions',
         'django.contrib.staticfiles',
+        'django.contrib.sites',
+        'django.contrib.flatpages',
         'admin_log_entries',
     ),
     MIDDLEWARE=(
@@ -54,6 +56,9 @@ settings.configure(
             },
         },
     ],
+    USE_TZ=True,
+    SITE_ID=1,
+    FIXTURE_DIRS=[os.path.join(BASE_DIR, 'fixtures')],
 )
 
 

@@ -1,4 +1,3 @@
-from django.contrib.auth import get_user_model
 from django.test import TestCase
 from django.test.utils import override_settings
 from django.urls import reverse
@@ -7,21 +6,14 @@ from admin_log_entries.settings import compute_settings
 
 
 class AdminViewsTest(TestCase):
+    fixtures = [
+        'test_data.json',
+    ]
+
     def setUp(self):
-        credentials = {
-            'username': 'superuser',
-            'password': 'testing!',
-        }
-
-        get_user_model()._default_manager.create_superuser(
-            username=credentials['username'],
-            email='superuser@example.com',
-            password=credentials['password'],
-        )
-
         self.client.login(
-            username=credentials['username'],
-            password=credentials['password'],
+            username='superuser',
+            password='testing!',
         )
 
     def test_index(self):

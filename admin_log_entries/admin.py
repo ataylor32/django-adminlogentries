@@ -63,7 +63,7 @@ class LogEntryAdmin(admin.ModelAdmin):
             link_or_text = entry
         else:
             link_or_text = format_html(
-                '<a href="{}">{}</a>',
+                u'<a href="{}">{}</a>',
                 entry.get_admin_url(),
                 entry,
             )
@@ -74,7 +74,7 @@ class LogEntryAdmin(admin.ModelAdmin):
             content_type = _('Unknown content')
 
         return format_html(
-            '{}<br><span class="mini quiet">{}</span>',
+            u'{}<br><span class="mini quiet">{}</span>',
             link_or_text,
             content_type,
         )
