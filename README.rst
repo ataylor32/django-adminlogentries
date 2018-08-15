@@ -7,8 +7,8 @@ recent actions. This app provides a ``ModelAdmin`` for
 ``django.contrib.admin``'s ``LogEntry`` model (with everything except the list
 disabled), allowing you to see every action taken by every user. The list can
 be filtered, searched, and sorted, as you would expect of a ``ModelAdmin``.
-This app is for Django 1.11+. It may work on older versions of Django, but it
-has not been tested.
+This app is for Django 1.11, 2.0, and 2.1. It may work on older versions of
+Django, but it has not been tested.
 
 ------------
 Installation
