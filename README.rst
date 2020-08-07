@@ -49,4 +49,5 @@ add the following to your "settings.py":
     }
 
 This will prevent "Log entries" from being displayed on the admin index page
-and will also prevent accessing the ``admin`` module's index page.
+(and sidebar, in the case of Django 3.1+) and will also prevent accessing the
+``admin`` module's index page.
