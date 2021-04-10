@@ -1,10 +1,15 @@
+import django
 from django.conf import settings
 from django.contrib import admin
 from django.contrib.admin.models import ADDITION, CHANGE, DELETION, LogEntry
 from django.core.exceptions import PermissionDenied
 from django.template.defaultfilters import capfirst
 from django.utils.html import format_html
-from django.utils.translation import ugettext_lazy as _
+
+if django.VERSION >= (2, 0):
+    from django.utils.translation import gettext_lazy as _
+else:
+    from django.utils.translation import ugettext_lazy as _
 
 from .settings import ADMIN_LOG_ENTRIES_SETTINGS
 
