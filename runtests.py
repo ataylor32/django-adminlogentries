@@ -13,6 +13,7 @@ BASE_DIR = os.path.join(
 
 settings.configure(
     BASE_DIR=BASE_DIR,
+    SECRET_KEY='test',
     DEBUG=True,
     DATABASES={
         'default': {
