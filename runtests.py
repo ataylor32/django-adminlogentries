@@ -2,6 +2,7 @@
 import os
 import sys
 
+import dj_database_url
 import django
 from django.conf import settings
 from django.test.utils import get_runner
@@ -16,10 +17,9 @@ settings.configure(
     SECRET_KEY='test',
     DEBUG=True,
     DATABASES={
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': 'db.sqlite3',
-        }
+        'default': dj_database_url.config(
+            default='postgres://developer:developer@localhost:5432/django_test',
+        ),
     },
     ROOT_URLCONF='tests.urls',
     INSTALLED_APPS=(
